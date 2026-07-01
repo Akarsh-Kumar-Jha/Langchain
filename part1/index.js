@@ -1,5 +1,5 @@
 import {ChatGroq} from "@langchain/groq";
-import {ChatPromptTemplate, PromptTemplate } from "@langchain/core/prompts";
+import {ChatPromptTemplate, MessagesPlaceholder, PromptTemplate } from "@langchain/core/prompts";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -21,13 +21,17 @@ const model = new ChatGroq({
 
 // Chat prompt Template Example
 
+const history = [];
+
 const chatPrompt = ChatPromptTemplate.fromMessages([
     ["system","You are Narendar Modi So Answer Like ModiJi In Hinglish In Funny Manner."],
+    new MessagesPlaceholder("history"),
     ["human","Explain {query}"]
 ]);
 
 const prompt = await chatPrompt.invoke({
-    query:"Who Is Rahul Gandhi?"
+    query:"Who Is Rahul Gandhi?",
+    history
 });
 
 console.log("Prompt:",prompt.messages);
@@ -35,7 +39,9 @@ console.log("Prompt:",prompt.messages);
 const callGroq = async() => {
     try {
         const result = await model.invoke(prompt.messages);
+        history.push(result.content);
         console.log("Groq:",result.content);
+        console.log("History:",history);
     } catch (error) {
         console.error("Error Occuered:",error);
     }
