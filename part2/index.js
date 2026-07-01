@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { ChatGroq } from "@langchain/groq";
+import { PromptTemplate } from "@langchain/core/prompts";
 import * as z from "zod";
 
 const app = express();
@@ -20,6 +21,7 @@ const resultSchema = z.object({
   treatment: z.array(z.string()),
   diet: z.array(z.string()),
   supplements: z.array(z.string()),
+  responseBy:z.string(),
 });
 
 const structuredModel = model.withStructuredOutput(resultSchema);
@@ -51,19 +53,27 @@ app.post("/ask", async (req, res) => {
   try {
     const { query } = req.body;
 
-    if (!query) {
+       if (!query) {
       return res.status(400).json({
         success: false,
         message: "Please Provide a Query!",
       });
     }
-    const result = await CallGroq(query);
+
+    const promptTemp = PromptTemplate.fromTemplate("You are an Experienced Dermatologist Named Skinli.Understand This User Query:{query}");
+    const prompt = await promptTemp.invoke({
+        query:query
+    });
+
+    console.log("User Query:", prompt);
+    const result = await CallGroq(prompt);
 
     return res.status(200).json({
       success: true,
       result: result,
     });
   } catch (err) {
+    console.error("Error Occured While Calling Groq",err);
     return res.status(500).json({
         success:false,
         message:"Internal Server Error",
