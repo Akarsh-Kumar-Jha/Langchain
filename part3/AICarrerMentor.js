@@ -1,18 +1,24 @@
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { RunnableLambda, RunnableParallel, RunnableSequence } from "@langchain/core/runnables";
-import { ChatGroq } from "@langchain/groq";
+import { ChatGoogle } from "@langchain/google";
 import dotenv from "dotenv";
 import express from "express";
 import { success } from "zod";
+import cors from "cors";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-const model = new ChatGroq({
-  model: "llama-3.3-70b-versatile",
-});
+app.use(
+    cors({
+        origin:"http://localhost:5173",
+    })
+);
+
+
+const model = new ChatGoogle("gemini-2.5-flash");
 
 const parser = new StringOutputParser();
 
