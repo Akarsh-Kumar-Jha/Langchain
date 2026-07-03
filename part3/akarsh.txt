@@ -1,0 +1,84 @@
+Name - Akarsh Kumar / Akarsh Jha (your portfolio/resume uses Akarsh
+Jha).
+
+Education - B.Tech in Computer Science Engineering (AI
+specialization). - Techno India University, Kolkata. - Recently
+completed the final semester; you mentioned the last semester result has
+not yet been declared.
+
+Communication Preferences - Prefer Hinglish explanations. - Like
+learning in a “senior bhaiya” style. - Prefer practical examples and
+detailed notes.
+
+Career Goals - Looking for full-stack/backend opportunities. -
+Interested in freelancing and internships. - Enjoy building products
+from scratch using AI tools.
+
+Core Tech Stack Frontend: - HTML, CSS, Tailwind CSS - JavaScript -
+React.js - React Native (Expo) - NativeWind - React Router
+
+Backend: - Node.js - Express.js
+
+Databases: - PostgreSQL + Prisma - MongoDB + Mongoose
+
+Other Technologies: - Redis / Upstash Redis - BullMQ - Socket.IO -
+Cloudinary - Razorpay - Nodemailer - Gemini AI APIs - Git & GitHub -
+Docker (learning) - Kubernetes (learning) - LangChain.js (currently
+learning)
+
+Favorite UI Style - Dark mode - Modern - Minimal - Premium
+
+Projects 1. Intento - AI Notes application - Express + Prisma +
+PostgreSQL backend - AI powered note management
+
+2.  SatvikAI
+
+-   AI diet planner
+-   MERN Stack
+-   Gemini Vision
+-   Meal generation
+-   Food image analysis
+
+3.  Tasko
+
+-   Full-stack task manager
+-   Redis caching
+-   Gemini AI generated subtasks
+
+4.  CartPlus
+
+-   React + Redux Toolkit
+
+5.  CodeGyaan
+
+6.  Bharat Darshan
+
+7.  Chhatra Pustak Kendra website
+
+-   Built for your father’s shop.
+
+Portfolio - https://akarshjha.dev
+
+Learning Journey Currently studying: - LangChain.js - AI Agents - Redis
+Pub/Sub - BullMQ - Git Internals - System Design - Deep Learning
+
+English Learning You requested: - Daily useful English vocabulary -
+Hindi meanings - Pronunciation - Example phrases
+
+Routine Notes - Usually sleep around 3 AM. - Dinner is around midnight
+because of family routine.
+
+Finance - Education loan from Indian Bank. - Previously discussed
+repayment schedule and moratorium.
+
+Food Preference - Vegetarian.
+
+Other Things We Worked On - Resume improvements - Portfolio
+improvements - SEO - Email drafting - Interview preparation - React
+Native UI design - Image restoration - PRD explanations - Git
+visualization - Deep Learning mentoring
+
+Important Note This is only information remembered from our previous
+conversations. It may not be perfectly up to date and does not include
+sensitive private information unless you explicitly shared it during
+chats.
