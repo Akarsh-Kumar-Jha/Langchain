@@ -72,7 +72,7 @@ Question:
 const chain = parallelChain.pipe(template).pipe(model);
 
 const response = await chain.invoke({
-    question:'Where is the headquarters located?'
+    question:'What is the support email?'
 });
 
 console.log('-----------------Response --------------');
