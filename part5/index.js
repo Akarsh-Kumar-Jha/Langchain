@@ -38,6 +38,13 @@ app.get('/',authMiddleware,(req,res) => {
     });
 });
 
+app.get('/health',(req,res) => {
+    return res.status(200).json({
+        success:true,
+        message:"Server Working Fine."
+    });
+});
+
 app.post('/analyze',authMiddleware,AI_Analysis);
 app.post('/ask',authMiddleware,chatAI);
 app.post('/match',authMiddleware,JD_match);
