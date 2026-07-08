@@ -21,8 +21,12 @@ app.use(fileUpload({
     useTempFiles : false,
 }));
 app.use(cors({
-    origin:"http://localhost:5173",
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://bugwala.in",
+    "https://www.bugwala.in"
+  ],
+  credentials: true
 }));
 
 
